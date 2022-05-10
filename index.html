@@ -108,8 +108,8 @@
         let minutes = now.getMinutes();
         let hours = now.getHours();
         let secondsDefault = seconds * 6 + 90;
-        let minutesDefault = minutes * 6 + 90;
-        let hoursDefault = hours * 6 + 90;
+        let minutesDefault = minutes * 6 + 90 + ((seconds/60)*6);
+        let hoursDefault = hours * 6 + 90 + ((minutes/60)*30);
         secondHand.style.transform = `rotate(${secondsDefault}deg)`;
         minuteHand.style.transform = `rotate(${minutesDefault}deg)`;
         hoursHand.style.transform = `rotate(${hoursDefault}deg)`;
